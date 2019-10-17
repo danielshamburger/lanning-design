@@ -1,2 +1,4 @@
-# lanning-design
-Portfolio of Samuel Lanning
+# Lanning Design
+### Portfolio of Samuel Lanning ###
+
+Prototype phase 🤓
