@@ -15,41 +15,48 @@
 				<h1 class="site-title">Lanning.Design</h1>
 			</div>
 			<div class="right">
-				<nav>
-					<ul>
-						<li>Home</li>
-						<li>Work</li>
-						<li>Contact</li>
-					</ul>
-				</nav>
+				
 			</div>
 		</div>
 		<div class="desktop">
-			<article id="1" class="window movable-box">
+			<article id="vote" class="window movable-box default-closed">
 				<div class="window-toolbar drag-handle">
 					<div class="window-title">Go Vote!</div>
-					<button type="button" name="close" data-close="1" class="close-window">close</button>
+					<button type="button" name="close" data-close="vote" class="close-window">close</button>
 				</div>
 				<div class="window-content">
 					<img src="images/vote.gif" alt="Go Vote!" />
 				</div>
 			</article>
-			<article id="2" class="window movable-box">
+			<article id="water" class="window movable-box default-closed">
 				<div class="window-toolbar drag-handle">
 					<div class="window-title">Water</div>
-					<button type="button" name="close" data-close="2" class="close-window">close</button>
+					<button type="button" name="close" data-close="water" class="close-window">close</button>
 				</div>
 				<div class="window-content">
 					<img src="images/water.jpg" alt="Water" />
 				</div>
 			</article>
-			<article id="3" class="window movable-box">
+			<article id="ope" class="window movable-box default-closed">
 				<div class="window-toolbar drag-handle">
 					<div class="window-title">I'm just gunna sneak past yah, thanks.</div>
-					<button type="button" name="close" data-close="3" class="close-window">close</button>
+					<button type="button" name="close" data-close="ope" class="close-window">close</button>
 				</div>
 				<div class="window-content">
 					<img src="images/ope.jpg" alt="I'm just gunna sneak past yah, thanks." />
+				</div>
+			</article>
+			<article id="project-list" class="window movable-box">
+				<div class="window-toolbar drag-handle">
+					<div class="window-title">Project List</div>
+					<button type="button" name="close" data-close="project-list" class="close-window">close</button>
+				</div>
+				<div class="window-content">
+					<ul>
+						<li><a href="#" data-open="water" class="open-link">Water</a></li>
+						<li><a href="#" data-open="vote" class="open-link">Vote!</a></li>
+						<li><a href="#" data-open="ope" class="open-link">Ope.</a></li>
+					</ul>
 				</div>
 			</article>
 		</div>

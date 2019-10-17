@@ -1,12 +1,9 @@
-let position = { x: 0, y: 0 };
-
-const guiWindows = document.getElementsByClassName("movable-box");
-
 /**
  * General "window behavior"
  */
 
 const closeButtons = document.getElementsByClassName("close-window");
+const openLinks = document.getElementsByClassName("open-link");
 
 function closeWindow() {
 	document.getElementById(this.dataset.close).style.display = 'none';
@@ -15,6 +12,24 @@ function closeWindow() {
 Array.from(closeButtons).forEach(function(element) {
 	element.addEventListener('click', closeWindow);
   });
+
+  Array.from(openLinks).forEach(function(element) {
+	element.addEventListener('click', function(event) {
+		event.preventDefault();
+		for (let item of guiWindows) {
+			// console.log(item);
+			if ( item.classList.contains("active-window") ) {
+				item.classList.remove("active-window");
+			}
+		  }
+		let activeWindow = document.getElementById(this.dataset.open);
+		activeWindow.style.display = 'block';
+		activeWindow.classList.add('active-window');
+	});
+  });
+
+let position = { x: 0, y: 0 };
+const guiWindows = document.getElementsByClassName("movable-box");
 
 interact(".movable-box").draggable({
   listeners: {

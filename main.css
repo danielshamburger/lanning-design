@@ -15,6 +15,7 @@ body::-webkit-scrollbar {
 	height: 25px;
 	border: 1px solid #fbfade;
 }
+
 body::-webkit-scrollbar-track {
 
 }
@@ -24,6 +25,7 @@ body::-webkit-scrollbar-thumb {
   background-size: 14px;
   background-position: center center;
   background-repeat: no-repeat;
+  border: 1px solid #333;
 }
 
 .toolbar {
@@ -78,16 +80,22 @@ body::-webkit-scrollbar-thumb {
 
 .window {
   min-width: 300px;
-  min-height: 400px;
-  max-width: 600px;
+  max-width: 800px;
   border: 1px solid #333;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 100px;
+  left: 100px;
   touch-action: none;
   user-select: none;
   background: #fff;
   z-index: 10;
+}
+
+.window.default-closed {
+	display: none;
+	top: 200px;
+	  left: 200px;
+	  z-index: 11;
 }
 
 .window:after {
@@ -102,7 +110,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .window.active-window {
-  z-index: 11;
+  z-index: 13;
 }
 
 .window-toolbar {
@@ -115,7 +123,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .window-toolbar .window-title {
-	padding: 7px 8px;
+	padding: 8px 12px;
 }
 
 .window-toolbar .close-window {
@@ -139,6 +147,19 @@ body::-webkit-scrollbar-thumb {
   background: #fff;
   position: relative;
   z-index: 12;
+}
+
+.window-content ul {
+	padding: 20px 12px;
+	margin: 0;
+}
+
+.window-content ul li {
+	margin: 0 0 12px 0;
+}
+
+.window-content a{
+	color: blue;
 }
 
 .window .window-content img {
