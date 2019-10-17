@@ -5,12 +5,10 @@
 const closeButtons = document.getElementsByClassName("close-window");
 const openLinks = document.getElementsByClassName("open-link");
 
-function closeWindow() {
-	document.getElementById(this.dataset.close).style.display = 'none';
-}
-
 Array.from(closeButtons).forEach(function(element) {
-	element.addEventListener('click', closeWindow);
+	element.addEventListener('click', function(event) {
+		document.getElementById(this.dataset.close).style.display = 'none';
+	});
   });
 
   Array.from(openLinks).forEach(function(element) {
